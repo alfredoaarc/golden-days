@@ -129,8 +129,8 @@ if (voicesEl && GD.voices) {
     const stars =
       "★".repeat(v.stars) + `<span class="off">${"★".repeat(5 - v.stars)}</span>`;
     const video = v.photo
-      ? `<div class="voice-video has-photo"><img src="${esc(v.photo)}" alt="${esc(v.name)}" loading="lazy" width="200" height="200" /><span class="play" aria-hidden="true"></span></div>`
-      : `<div class="voice-video"><div class="photo-ph" role="img" aria-label="${esc(v.name)}"><span class="todo-chip">TODO: video</span></div></div>`;
+      ? `<img class="voice-photo" src="${esc(v.photo)}" alt="${esc(v.name)}" loading="lazy" width="200" height="200" />`
+      : `<div class="voice-video"><div class="photo-ph" role="img" aria-label="${esc(v.name)}"><span class="todo-chip">TODO: photo</span></div></div>`;
     const reply = v.reply ? `<div class="voice-reply">${esc(v.reply)}</div>` : "";
     voicesEl.append(
       el(

@@ -192,32 +192,12 @@ img.hero-poster { width: 100%; height: 100%; object-fit: cover; display: block; 
   display: block;
   background: var(--surface);
 }
-.voice-video.has-photo {
-  position: relative;
-  margin-bottom: 16px;
+.voice-photo {
+  width: 100%;
   border-radius: var(--radius);
-  overflow: hidden;
-}
-.voice-video.has-photo img { width: 100%; display: block; }
-.voice-video.has-photo .play {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background: rgba(255, 252, 245, 0.92);
-  box-shadow: var(--shadow);
-}
-.voice-video.has-photo .play::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 54%;
-  transform: translate(-50%, -50%);
-  border-style: solid;
-  border-width: 9px 0 9px 15px;
-  border-color: transparent transparent transparent var(--green);
+  margin-bottom: 16px;
+  display: block;
+  background: var(--surface);
 }
 
 /* 01 · Hero */
