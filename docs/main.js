@@ -16,6 +16,7 @@ var vars = {
   "telDisplay": A.telDisplay,
   "email": A.email,
   "registro": A.registro,
+  "regNumber": A.regNumber,
   "years": A.years,
   "ratio": A.ratio,
   "visitHours": pick(A.visitHours),

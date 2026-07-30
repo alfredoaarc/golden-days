@@ -24,6 +24,7 @@ window.ALENTIA = {
   years: "18", // años abiertos
   ratio: "1 : 6", // cuidador por residentes, de media (día)
   registro: "Registro C.A.M. nº S-4821", // ficticio, formato verosímil
+  regNumber: "S-4821", // solo el número, para la franja de confianza
 
   // --- Ubicación (genérica, noroeste de Madrid) ---
   address: {
