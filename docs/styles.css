@@ -114,6 +114,7 @@ section {
   box-shadow: var(--shadow);
 }
 .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+.btn:active { transform: scale(0.98); }
 .btn-block { width: 100%; }
 
 /* TODO chips (honest placeholders) */
@@ -322,7 +323,9 @@ section {
   border-radius: var(--radius);
   padding: 16px;
   text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.person:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .person .photo-ph { min-height: 150px; margin-bottom: 14px; }
 .person-name { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.2rem; }
 .person-role { color: var(--ink-soft); font-size: 0.95rem; margin: 2px 0 8px; }
@@ -346,7 +349,9 @@ section {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 22px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.voice:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .voice-video .photo-ph { min-height: 160px; margin-bottom: 16px; }
 .voice-stars { color: var(--gold); letter-spacing: 2px; font-size: 1.1rem; }
 .voice-stars .off { color: rgba(42, 37, 30, 0.2); }
@@ -457,8 +462,26 @@ section {
 .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .js .reveal.in { opacity: 1; transform: none; }
 
+/* Calm hero entrance on load (gentle fade, no bounce) */
+@keyframes gd-fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+.js .hero-media,
+.js .hero-copy > * {
+  opacity: 0;
+  animation: gd-fade-up 0.7s ease-out forwards;
+}
+.js .hero-media { animation-delay: 0.05s; }
+.js .hero-copy h1 { animation-delay: 0.12s; }
+.js .hero-copy .hero-sub { animation-delay: 0.22s; }
+.js .hero-copy .btn { animation-delay: 0.32s; }
+.js .hero-copy .scroll-link { animation-delay: 0.4s; }
+
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .btn-primary:hover { transform: none; }
+  .js .hero-media,
+  .js .hero-copy > * { animation: none; opacity: 1; }
 }
