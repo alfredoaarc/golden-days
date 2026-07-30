@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- First visit only: send Spanish browsers to the default "/". Skips bots,
+         and never runs again once a language is chosen (cookie) or the switcher is used. -->
+    <script>
+      (function () {
+        try {
+          if (/(?:^|;\s*)ttw_lang=/.test(document.cookie)) return;
+          var ua = navigator.userAgent || "";
+          if (/bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|quora|pinterest|whatsapp|telegram|W3C_Validator|Lighthouse|HeadlessChrome/i.test(ua)) return;
+          var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+          var isEs = langs.some(function (l) { return /^es\b/i.test(l); });
+          document.cookie = "ttw_lang=" + (isEs ? "es" : "en") + ";path=/;max-age=31536000";
+          if (isEs) location.replace("/");
+        } catch (e) {}
+      })();
+    </script>
+
+    <title>Golden Days — a home where your mother is still herself</title>
+    <meta
+      name="description"
+      content="Golden Days is a family-run home. Come have lunch with us on any Tuesday — see the people, the food, and the day for yourself before you decide anything."
+    />
+    <link rel="canonical" href="https://example.trustthewizard.com/en/" />
+    <link rel="alternate" hreflang="es-ES" href="https://example.trustthewizard.com/" />
+    <link rel="alternate" hreflang="en" href="https://example.trustthewizard.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://example.trustthewizard.com/en/" />
+
+    <meta property="og:title" content="Golden Days — come have lunch with us" />
+    <meta
+      property="og:description"
+      content="See what a day here really looks like. Then come for lunch — no tour, no pressure."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css?v=3" />
+
+    <!-- Local SEO. Sample data for this demo — replace with the home's real details. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Golden Days",
+        "description": "A family-run home for older people.",
+        "telephone": "(555) 210-4488",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Fairfield"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "9.4",
+          "bestRating": "10",
+          "ratingCount": "128"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Ana" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+            "reviewBody": "My father argued about the whole idea. Now he calls it home."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Marta" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "3", "bestRating": "5" },
+            "reviewBody": "The first two weeks were hard, and the laundry got mixed up more than once."
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <div class="topbar">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a class="lang-link" data-lang="es" hreflang="es-ES" href="/"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#c60b1e"/><rect y="4" width="24" height="8" fill="#ffc400"/></svg>ES</a>
+        <span aria-hidden="true">·</span>
+        <a class="lang-link is-active" data-lang="en" hreflang="en" href="/en/" aria-current="true"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect y="0" width="24" height="2.28" fill="#b22234"/><rect y="4.57" width="24" height="2.28" fill="#b22234"/><rect y="9.14" width="24" height="2.28" fill="#b22234"/><rect y="13.71" width="24" height="2.28" fill="#b22234"/><rect width="10.5" height="8.6" fill="#3c3b6e"/><g fill="#fff"><circle cx="2" cy="1.8" r=".6"/><circle cx="4.5" cy="1.8" r=".6"/><circle cx="7" cy="1.8" r=".6"/><circle cx="3.2" cy="4.3" r=".6"/><circle cx="5.7" cy="4.3" r=".6"/><circle cx="2" cy="6.8" r=".6"/><circle cx="4.5" cy="6.8" r=".6"/><circle cx="7" cy="6.8" r=".6"/></g></svg>EN</a>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- 01 · HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <!-- Brand illustration. Swap for a real 12s looping video (autoplay muted playsinline) or a photo of the home. -->
+          <img class="hero-poster" src="/img/hero.svg" alt="Residents and staff at Golden Days sharing a meal" width="800" height="600" />
+        </div>
+        <div class="hero-copy">
+          <h1 id="hero-title">Here, your mother is still herself.</h1>
+          <p class="hero-sub">
+            In <span data-gd="home.town">Fairfield</span> ·
+            Home to <span data-gd="home.residents">36</span> ·
+            <span data-gd="home.dayRatio">1 carer for every 3, by day</span>
+          </p>
+          <a class="btn btn-primary" data-cta href="#visit">Come have lunch with us</a>
+          <a class="scroll-link" href="#day">See what a day here looks like <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <!-- 02 · TRUST BAR -->
+      <section class="trust" aria-label="The numbers">
+        <ul class="metrics" id="metrics"><!-- filled from content.js --></ul>
+        <p class="metrics-note">Sample figures for this demo — each one is a real, checkable number for the home.</p>
+      </section>
+
+      <!-- 03 · LETTER FROM THE DIRECTOR -->
+      <section class="letter reveal" aria-labelledby="letter-title">
+        <div class="letter-photo">
+          <!-- Brand illustration. Swap for a real photo of the director. -->
+          <img class="letter-portrait" src="/img/director.svg" alt="Portrait of Miguel Ángel, director of Golden Days" width="400" height="400" />
+        </div>
+        <div class="letter-body">
+          <h2 id="letter-title">A note before you decide anything</h2>
+          <p>
+            When you found this page, it was probably late, and you probably felt like you were
+            failing. I've sat across from hundreds of sons and daughters carrying the same quiet
+            fear: that moving a parent into a home means giving up on them.
+          </p>
+          <p>
+            It doesn't. You are not leaving your mother behind. You are handing her day to people
+            who can give her more than one exhausted person can alone — a doctor down the hall, a
+            warm kitchen, someone to talk to at three in the afternoon.
+          </p>
+          <p>
+            The guilt is real, and it means you love her. But love isn't the same as doing it all
+            by yourself. So come and see us — not for a tour, for lunch. Watch how we talk to the
+            people who live here, and decide with your own eyes. If it isn't right, you'll know,
+            and that's fine too.
+          </p>
+          <p class="signature" aria-label="Signed, the director">Miguel Ángel</p>
+          <p class="signature-role">Director, Golden Days <span class="todo-chip">TODO: real name &amp; scanned signature</span></p>
+        </div>
+      </section>
+
+      <!-- 04 · A DAY HERE -->
+      <section id="day" class="day" aria-labelledby="day-title">
+        <h2 id="day-title" class="section-title">A day here</h2>
+        <ol class="timeline" id="timeline"><!-- filled from content.js --></ol>
+
+        <!-- Signature element: today's board -->
+        <div class="board reveal" id="today-board" aria-live="polite">
+          <!-- filled from content.js -->
+        </div>
+      </section>
+
+      <!-- 05 · THE PEOPLE -->
+      <section class="people" aria-labelledby="people-title">
+        <h2 id="people-title" class="section-title">The people who'll know your mother's name</h2>
+        <p class="section-sub">How long each of them has been here — the number that matters most.</p>
+        <ul class="people-grid" id="people"><!-- filled from content.js --></ul>
+      </section>
+
+      <!-- 06 · FAMILY VOICES -->
+      <section class="voices" aria-labelledby="voices-title">
+        <h2 id="voices-title" class="section-title">What other families say</h2>
+        <p class="section-sub">Including the parts that weren't perfect.</p>
+        <ul class="voices-grid" id="voices"><!-- filled from content.js --></ul>
+      </section>
+
+      <!-- 07 · CLOSE & VISIT -->
+      <section id="visit" class="visit" aria-labelledby="visit-title">
+        <div class="visit-inner">
+          <h2 id="visit-title">Come have lunch with us</h2>
+          <p class="visit-frame">
+            Come for lunch on any Tuesday. No sales visit, no pressure, no staged tour — just a
+            table, a plate of what everyone's eating, and time to look around.
+          </p>
+
+          <form id="visit-form" novalidate>
+            <fieldset class="times">
+              <legend>Pick a time that suits you</legend>
+              <div class="time-options" id="visit-times"><!-- filled from content.js --></div>
+            </fieldset>
+
+            <div class="fields">
+              <label>
+                <span>Your name</span>
+                <input type="text" name="name" id="name" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Your phone</span>
+                <input type="tel" name="phone" id="phone" autocomplete="tel" required />
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <span class="btn-label">Come have lunch with us</span>
+            </button>
+            <p class="reassure">Carmen calls you — not a salesperson.</p>
+            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="visit-done" id="visit-done" hidden>
+            <div class="done-mark" aria-hidden="true">🌿</div>
+            <h3>Thank you. Carmen will call you.</h3>
+            <p id="visit-done-detail"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-name">🌿 Golden Days</p>
+      <p>A home in <span data-gd="home.town">Fairfield</span>. Come and see for yourself.</p>
+    </footer>
+
+    <!-- Always-visible call button on mobile -->
+    <a class="call-bar" data-gd-href="home.phoneHref" href="tel:+15552104488">
+      <span aria-hidden="true">☏</span> Call us · <span data-gd="home.phone">(555) 210-4488</span>
+    </a>
+
+    <script src="/content.js"></script>
+    <script src="/main.js?v=3"></script>
+  </body>
+</html>

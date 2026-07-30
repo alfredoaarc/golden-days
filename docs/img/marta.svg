@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img">
+<defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="72%">
+<stop offset="0" stop-color="#eef0e8"/>
+<stop offset="1" stop-color="#d5ddc7"/>
+</radialGradient>
+</defs>
+<rect width="400" height="400" fill="url(#bg)"/>
+<circle cx="200" cy="176" r="150" fill="#ffffff" opacity="0.10"/>
+<!-- shoulders -->
+<path d="M96 400 Q100 300 200 288 Q300 300 304 400 Z" fill="#9a6a8a"/>
+<path d="M188 288 h24 v22 q-12 10 -24 0 Z" fill="#b87a4e"/>
+<path d="M96 400 Q104 330 150 312 L200 356 L250 312 Q296 330 304 400 Z" fill="#7c5470" opacity="0.55"/>
+<!-- head -->
+<ellipse cx="200" cy="196" rx="66" ry="72" fill="#d99a6c"/>
+<path d="M134 200 Q134 240 172 258 Q140 236 138 200 Z" fill="#b87a4e" opacity="0.5"/>
+<!-- ears -->
+<circle cx="136" cy="200" r="12" fill="#d99a6c"/>
+<circle cx="264" cy="200" r="12" fill="#d99a6c"/>
+<circle cx="150" cy="214" r="10" fill="#e8927a" opacity="0.35"/>
+<circle cx="250" cy="214" r="10" fill="#e8927a" opacity="0.35"/>
+<circle cx="168" cy="196" r="5.2" fill="#3a2e26"/>
+<circle cx="232" cy="196" r="5.2" fill="#3a2e26"/>
+<path d="M156 182 Q168 176 180 182" fill="none" stroke="#231b15" stroke-width="4" stroke-linecap="round"/>
+<path d="M220 182 Q232 176 244 182" fill="none" stroke="#231b15" stroke-width="4" stroke-linecap="round"/>
+<path d="M200 198 L196 214 Q200 218 204 214" fill="none" stroke="#b87a4e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 178 232 Q 200 241 222 232" fill="none" stroke="#7a4a34" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="200" cy="112" r="20" fill="#2f2620"/>
+<path d="M140 172 Q138 116 200 114 Q262 116 260 172 Q262 150 244 148 Q246 128 200 128 Q154 128 156 148 Q138 150 140 172 Z" fill="#2f2620"/>
+</svg>

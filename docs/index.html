@@ -1,35 +1,58 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Golden Days — a home where your mother is still herself</title>
+
+    <!-- First visit only: send English browsers to /en/. Skips bots, and never
+         runs again once a language is chosen (cookie) or the switcher is used. -->
+    <script>
+      (function () {
+        try {
+          if (/(?:^|;\s*)ttw_lang=/.test(document.cookie)) return;
+          var ua = navigator.userAgent || "";
+          if (/bot|crawl|spider|slurp|bingpreview|facebookexternalhit|embedly|quora|pinterest|whatsapp|telegram|W3C_Validator|Lighthouse|HeadlessChrome/i.test(ua)) return;
+          var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""];
+          var isEs = langs.some(function (l) { return /^es\b/i.test(l); });
+          document.cookie = "ttw_lang=" + (isEs ? "es" : "en") + ";path=/;max-age=31536000";
+          if (!isEs) location.replace("/en/");
+        } catch (e) {}
+      })();
+    </script>
+
+    <title>Golden Days — un hogar donde tu madre sigue siendo ella misma</title>
     <meta
       name="description"
-      content="Golden Days is a family-run home. Come have lunch with us on any Tuesday — see the people, the food, and the day for yourself before you decide anything."
+      content="Golden Days es un hogar de gestión familiar. Ven a comer con nosotros un martes cualquiera: conoce a las personas, la comida y el día antes de decidir nada."
     />
-    <meta property="og:title" content="Golden Days — come have lunch with us" />
+    <link rel="canonical" href="https://example.trustthewizard.com/" />
+    <link rel="alternate" hreflang="es-ES" href="https://example.trustthewizard.com/" />
+    <link rel="alternate" hreflang="en" href="https://example.trustthewizard.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://example.trustthewizard.com/en/" />
+
+    <meta property="og:title" content="Golden Days — ven a comer con nosotros" />
     <meta
       property="og:description"
-      content="See what a day here really looks like. Then come for lunch — no tour, no pressure."
+      content="Mira cómo es de verdad un día aquí. Luego ven a comer, sin visita guiada ni presión."
     />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=2" />
+    <link rel="stylesheet" href="/styles.css?v=3" />
 
-    <!-- Local SEO. Sample data for this demo — replace with the home's real details. -->
+    <!-- SEO local. Datos de ejemplo para esta demo: sustitúyelos por los reales. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Golden Days",
-        "description": "A family-run home for older people.",
+        "description": "Un hogar de gestión familiar para personas mayores.",
         "telephone": "(555) 210-4488",
         "address": {
           "@type": "PostalAddress",
@@ -46,13 +69,13 @@
             "@type": "Review",
             "author": { "@type": "Person", "name": "Ana" },
             "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "My father argued about the whole idea. Now he calls it home."
+            "reviewBody": "Mi padre discutió con toda la idea. Ahora lo llama su casa."
           },
           {
             "@type": "Review",
             "author": { "@type": "Person", "name": "Marta" },
             "reviewRating": { "@type": "Rating", "ratingValue": "3", "bestRating": "5" },
-            "reviewBody": "The first two weeks were hard, and the laundry got mixed up more than once."
+            "reviewBody": "Las dos primeras semanas fueron duras, y la ropa se mezcló más de una vez."
           }
         ]
       }
@@ -60,144 +83,132 @@
   </head>
 
   <body>
-    <a class="skip" href="#main">Skip to content</a>
+    <a class="skip" href="#main">Saltar al contenido</a>
+
+    <div class="topbar">
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <a class="lang-link is-active" data-lang="es" hreflang="es-ES" href="/" aria-current="true"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#c60b1e"/><rect y="4" width="24" height="8" fill="#ffc400"/></svg>ES</a>
+        <span aria-hidden="true">·</span>
+        <a class="lang-link" data-lang="en" hreflang="en" href="/en/"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect y="0" width="24" height="2.28" fill="#b22234"/><rect y="4.57" width="24" height="2.28" fill="#b22234"/><rect y="9.14" width="24" height="2.28" fill="#b22234"/><rect y="13.71" width="24" height="2.28" fill="#b22234"/><rect width="10.5" height="8.6" fill="#3c3b6e"/><g fill="#fff"><circle cx="2" cy="1.8" r=".6"/><circle cx="4.5" cy="1.8" r=".6"/><circle cx="7" cy="1.8" r=".6"/><circle cx="3.2" cy="4.3" r=".6"/><circle cx="5.7" cy="4.3" r=".6"/><circle cx="2" cy="6.8" r=".6"/><circle cx="4.5" cy="6.8" r=".6"/><circle cx="7" cy="6.8" r=".6"/></g></svg>EN</a>
+      </div>
+    </div>
 
     <main id="main">
       <!-- 01 · HERO -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media">
-          <!-- TODO: real 12s looping video of the home (autoplay muted playsinline), with this as poster -->
-          <div class="hero-poster" role="img" aria-label="Residents and staff at Golden Days sharing a meal">
-            <svg viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs>
-                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color="#f6e3c4" />
-                  <stop offset="1" stop-color="#eef3e6" />
-                </linearGradient>
-              </defs>
-              <rect width="800" height="600" fill="url(#sky)" />
-              <circle cx="620" cy="150" r="80" fill="#e9a949" opacity="0.85" />
-              <path d="M0 430 Q 220 340 420 410 T 800 390 L800 600 L0 600 Z" fill="#c3ddb0" />
-              <path d="M0 490 Q 260 420 520 480 T 800 470 L800 600 L0 600 Z" fill="#93bd86" />
-              <rect x="300" y="360" width="200" height="130" rx="8" fill="#fff6e6" />
-              <path d="M288 364 L400 288 L512 364 Z" fill="#c06a3a" />
-              <rect x="378" y="410" width="44" height="80" rx="5" fill="#e0913a" />
-              <rect x="320" y="386" width="34" height="34" rx="4" fill="#cfe3d4" />
-              <rect x="446" y="386" width="34" height="34" rx="4" fill="#cfe3d4" />
-              <circle cx="180" cy="405" r="48" fill="#7fb182" />
-              <rect x="172" y="440" width="16" height="52" fill="#93673f" />
-            </svg>
-            <span class="todo-chip">TODO: real 12s video</span>
-          </div>
+          <!-- Ilustración de marca. Sustitúyela por un vídeo real de 12s en bucle (autoplay muted playsinline) o una foto del hogar. -->
+          <img class="hero-poster" src="/img/hero.svg" alt="Residentes y equipo de Golden Days compartiendo una comida" width="800" height="600" />
         </div>
         <div class="hero-copy">
-          <h1 id="hero-title">Here, your mother is still herself.</h1>
+          <h1 id="hero-title">Aquí, tu madre sigue siendo ella misma.</h1>
           <p class="hero-sub">
-            In <span data-gd="home.town">Fairfield</span> ·
-            Home to <span data-gd="home.residents">36</span> ·
-            <span data-gd="home.dayRatio">1 carer for every 3, by day</span>
+            En <span data-gd="home.town">Fairfield</span> ·
+            Hogar de <span data-gd="home.residents">36</span> personas ·
+            <span data-gd="home.dayRatio">1 cuidador por cada 3, de día</span>
           </p>
-          <a class="btn btn-primary" data-cta href="#visit">Come have lunch with us</a>
-          <a class="scroll-link" href="#day">See what a day here looks like <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-primary" data-cta href="#visit">Ven a comer con nosotros</a>
+          <a class="scroll-link" href="#day">Mira cómo es un día aquí <span aria-hidden="true">↓</span></a>
         </div>
       </section>
 
-      <!-- 02 · TRUST BAR -->
-      <section class="trust" aria-label="The numbers">
-        <ul class="metrics" id="metrics"><!-- filled from content.js --></ul>
-        <p class="metrics-note">Sample figures for this demo — each one is a real, checkable number for the home.</p>
+      <!-- 02 · BARRA DE CONFIANZA -->
+      <section class="trust" aria-label="Los números">
+        <ul class="metrics" id="metrics"><!-- se rellena desde content.js --></ul>
+        <p class="metrics-note">Cifras de ejemplo para esta demo: cada una es un número real y comprobable del hogar.</p>
       </section>
 
-      <!-- 03 · LETTER FROM THE DIRECTOR -->
+      <!-- 03 · CARTA DE LA DIRECCIÓN -->
       <section class="letter reveal" aria-labelledby="letter-title">
         <div class="letter-photo">
-          <!-- TODO: real photo of the director, medium size, looking at camera -->
-          <div class="photo-ph" role="img" aria-label="Photo of the director"><span class="todo-chip">TODO: director photo</span></div>
+          <!-- Ilustración de marca. Sustitúyela por una foto real de la dirección. -->
+          <img class="letter-portrait" src="/img/director.svg" alt="Retrato de Miguel Ángel, director de Golden Days" width="400" height="400" />
         </div>
         <div class="letter-body">
-          <h2 id="letter-title">A note before you decide anything</h2>
+          <h2 id="letter-title">Una nota antes de que decidas nada</h2>
           <p>
-            When you found this page, it was probably late, and you probably felt like you were
-            failing. I've sat across from hundreds of sons and daughters carrying the same quiet
-            fear: that moving a parent into a home means giving up on them.
+            Cuando encontraste esta página, seguramente era tarde y seguramente sentías que estabas
+            fallando. Me he sentado frente a cientos de hijos e hijas que cargan con el mismo miedo
+            callado: que llevar a un padre o una madre a un hogar significa rendirse con ellos.
           </p>
           <p>
-            It doesn't. You are not leaving your mother behind. You are handing her day to people
-            who can give her more than one exhausted person can alone — a doctor down the hall, a
-            warm kitchen, someone to talk to at three in the afternoon.
+            No es así. No estás dejando atrás a tu madre. Estás poniendo su día en manos de personas
+            que pueden darle más de lo que una sola persona agotada puede dar sola: un médico al
+            final del pasillo, una cocina caliente, alguien con quien hablar a las tres de la tarde.
           </p>
           <p>
-            The guilt is real, and it means you love her. But love isn't the same as doing it all
-            by yourself. So come and see us — not for a tour, for lunch. Watch how we talk to the
-            people who live here, and decide with your own eyes. If it isn't right, you'll know,
-            and that's fine too.
+            La culpa es real, y significa que la quieres. Pero querer no es lo mismo que hacerlo todo
+            tú solo. Así que ven a vernos, no a una visita guiada, a comer. Observa cómo hablamos con
+            las personas que viven aquí y decide con tus propios ojos. Si no es lo adecuado, lo
+            sabrás, y también está bien.
           </p>
-          <p class="signature" aria-label="Signed, the director">Miguel Ángel</p>
-          <p class="signature-role">Director, Golden Days <span class="todo-chip">TODO: real name &amp; scanned signature</span></p>
+          <p class="signature" aria-label="Firmado, la dirección">Miguel Ángel</p>
+          <p class="signature-role">Director, Golden Days <span class="todo-chip">TODO: nombre real y firma escaneada</span></p>
         </div>
       </section>
 
-      <!-- 04 · A DAY HERE -->
+      <!-- 04 · UN DÍA AQUÍ -->
       <section id="day" class="day" aria-labelledby="day-title">
-        <h2 id="day-title" class="section-title">A day here</h2>
-        <ol class="timeline" id="timeline"><!-- filled from content.js --></ol>
+        <h2 id="day-title" class="section-title">Un día aquí</h2>
+        <ol class="timeline" id="timeline"><!-- se rellena desde content.js --></ol>
 
-        <!-- Signature element: today's board -->
+        <!-- Elemento estrella: la pizarra de hoy -->
         <div class="board reveal" id="today-board" aria-live="polite">
-          <!-- filled from content.js -->
+          <!-- se rellena desde content.js -->
         </div>
       </section>
 
-      <!-- 05 · THE PEOPLE -->
+      <!-- 05 · LAS PERSONAS -->
       <section class="people" aria-labelledby="people-title">
-        <h2 id="people-title" class="section-title">The people who'll know your mother's name</h2>
-        <p class="section-sub">How long each of them has been here — the number that matters most.</p>
-        <ul class="people-grid" id="people"><!-- filled from content.js --></ul>
+        <h2 id="people-title" class="section-title">Las personas que sabrán el nombre de tu madre</h2>
+        <p class="section-sub">Cuánto tiempo lleva aquí cada una: el número que más importa.</p>
+        <ul class="people-grid" id="people"><!-- se rellena desde content.js --></ul>
       </section>
 
-      <!-- 06 · FAMILY VOICES -->
+      <!-- 06 · VOCES DE LAS FAMILIAS -->
       <section class="voices" aria-labelledby="voices-title">
-        <h2 id="voices-title" class="section-title">What other families say</h2>
-        <p class="section-sub">Including the parts that weren't perfect.</p>
-        <ul class="voices-grid" id="voices"><!-- filled from content.js --></ul>
+        <h2 id="voices-title" class="section-title">Lo que dicen otras familias</h2>
+        <p class="section-sub">Incluidas las partes que no fueron perfectas.</p>
+        <ul class="voices-grid" id="voices"><!-- se rellena desde content.js --></ul>
       </section>
 
-      <!-- 07 · CLOSE & VISIT -->
+      <!-- 07 · CIERRE Y VISITA -->
       <section id="visit" class="visit" aria-labelledby="visit-title">
         <div class="visit-inner">
-          <h2 id="visit-title">Come have lunch with us</h2>
+          <h2 id="visit-title">Ven a comer con nosotros</h2>
           <p class="visit-frame">
-            Come for lunch on any Tuesday. No sales visit, no pressure, no staged tour — just a
-            table, a plate of what everyone's eating, and time to look around.
+            Ven a comer un martes cualquiera. Sin visita comercial, sin presión, sin recorrido
+            preparado: solo una mesa, un plato de lo que come todo el mundo y tiempo para mirar
+            alrededor.
           </p>
 
           <form id="visit-form" novalidate>
             <fieldset class="times">
-              <legend>Pick a time that suits you</legend>
-              <div class="time-options" id="visit-times"><!-- filled from content.js --></div>
+              <legend>Elige la hora que mejor te venga</legend>
+              <div class="time-options" id="visit-times"><!-- se rellena desde content.js --></div>
             </fieldset>
 
             <div class="fields">
               <label>
-                <span>Your name</span>
+                <span>Tu nombre</span>
                 <input type="text" name="name" id="name" autocomplete="name" required />
               </label>
               <label>
-                <span>Your phone</span>
+                <span>Tu teléfono</span>
                 <input type="tel" name="phone" id="phone" autocomplete="tel" required />
               </label>
             </div>
 
             <button type="submit" class="btn btn-primary btn-block">
-              <span class="btn-label">Come have lunch with us</span>
+              <span class="btn-label">Ven a comer con nosotros</span>
             </button>
-            <p class="reassure">Carmen calls you — not a salesperson.</p>
+            <p class="reassure">Te llama Carmen, no un comercial.</p>
             <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
           </form>
 
           <div class="visit-done" id="visit-done" hidden>
             <div class="done-mark" aria-hidden="true">🌿</div>
-            <h3>Thank you. Carmen will call you.</h3>
+            <h3>Gracias. Carmen te llamará.</h3>
             <p id="visit-done-detail"></p>
           </div>
         </div>
@@ -206,15 +217,15 @@
 
     <footer class="footer">
       <p class="footer-name">🌿 Golden Days</p>
-      <p>A home in <span data-gd="home.town">Fairfield</span>. Come and see for yourself.</p>
+      <p>Un hogar en <span data-gd="home.town">Fairfield</span>. Ven a verlo con tus propios ojos.</p>
     </footer>
 
-    <!-- Always-visible call button on mobile -->
+    <!-- Botón de llamada siempre visible en el móvil -->
     <a class="call-bar" data-gd-href="home.phoneHref" href="tel:+15552104488">
-      <span aria-hidden="true">☏</span> Call us · <span data-gd="home.phone">(555) 210-4488</span>
+      <span aria-hidden="true">☏</span> Llámanos · <span data-gd="home.phone">(555) 210-4488</span>
     </a>
 
-    <script src="content.js"></script>
-    <script src="main.js?v=2"></script>
+    <script src="/content.js"></script>
+    <script src="/main.js?v=3"></script>
   </body>
 </html>
