@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- First visit only: send English browsers to /en/. Skips bots, and never
-         runs again once a language is chosen (cookie) or the switcher is used. -->
+    <!-- Primera visita: manda a /en/ a los navegadores en inglés. Salta bots y no
+         se repite si ya hay idioma elegido (cookie) o se usó el selector. -->
     <script>
       (function () {
         try {
@@ -20,62 +20,58 @@
       })();
     </script>
 
-    <title>Golden Days — un hogar donde tu madre sigue siendo ella misma</title>
+    <title>Residencia de ancianos en Mirasierra, Madrid — plazas disponibles y precios | Alentia</title>
     <meta
       name="description"
-      content="Golden Days es un hogar de gestión familiar. Ven a comer con nosotros un martes cualquiera: conoce a las personas, la comida y el día antes de decidir nada."
+      content="Residencia de mayores en el noroeste de Madrid con equipo médico propio, precios claros desde 1.950 €/mes y visitas sin cita previa. Plazas disponibles. Ven a conocernos hoy."
     />
     <link rel="canonical" href="https://example.trustthewizard.com/" />
     <link rel="alternate" hreflang="es-ES" href="https://example.trustthewizard.com/" />
     <link rel="alternate" hreflang="en" href="https://example.trustthewizard.com/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://example.trustthewizard.com/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://example.trustthewizard.com/" />
 
-    <meta property="og:title" content="Golden Days — ven a comer con nosotros" />
-    <meta
-      property="og:description"
-      content="Mira cómo es de verdad un día aquí. Luego ven a comer, sin visita guiada ni presión."
-    />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content="Residencia Alentia — cuidamos de tu padre o de tu madre como lo harías tú" />
+    <meta property="og:description" content="Residencia en Madrid con equipo médico propio, precios claros y visitas sin cita. Plazas disponibles." />
+
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&family=Caveat:wght@600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles.css?v=7" />
+    <link rel="stylesheet" href="/styles.css?v=8" />
 
-    <!-- SEO local. Datos de ejemplo para esta demo: sustitúyelos por los reales. -->
+    <!-- SEO local. DEMO: datos ficticios con formato verosímil. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Golden Days",
-        "description": "Un hogar de gestión familiar para personas mayores.",
-        "telephone": "(555) 210-4488",
+        "@type": ["MedicalBusiness", "LocalBusiness"],
+        "name": "Residencia Alentia",
+        "description": "Residencia de mayores en el noroeste de Madrid con equipo médico propio y precios claros.",
+        "url": "https://example.trustthewizard.com/",
+        "telephone": "+34910555250",
+        "email": "info@residenciaalentia.es",
+        "medicalSpecialty": "Geriatric",
+        "priceRange": "€€",
+        "image": "https://images.pexels.com/photos/5774929/pexels-photo-5774929.jpeg?auto=compress&cs=tinysrgb&w=1200",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Fairfield"
+          "streetAddress": "Calle del Olivar, 28",
+          "addressLocality": "Madrid",
+          "postalCode": "28035",
+          "addressRegion": "Comunidad de Madrid",
+          "addressCountry": "ES"
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "9.4",
-          "bestRating": "10",
-          "ratingCount": "128"
-        },
-        "review": [
+        "openingHoursSpecification": [
           {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Ana" },
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Mi padre discutió con toda la idea. Ahora lo llama su casa."
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Marta" },
-            "reviewRating": { "@type": "Rating", "ratingValue": "3", "bestRating": "5" },
-            "reviewBody": "Las dos primeras semanas fueron duras, y la ropa se mezcló más de una vez."
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "10:00",
+            "closes": "20:00",
+            "description": "Horario de visitas, sin cita previa"
           }
         ]
       }
@@ -85,147 +81,356 @@
   <body>
     <a class="skip" href="#main">Saltar al contenido</a>
 
-    <div class="topbar">
-      <div class="lang-switch" role="group" aria-label="Idioma">
-        <a class="lang-link is-active" data-lang="es" hreflang="es-ES" href="/" aria-current="true"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#c60b1e"/><rect y="4" width="24" height="8" fill="#ffc400"/></svg>ES</a>
-        <span aria-hidden="true">·</span>
-        <a class="lang-link" data-lang="en" hreflang="en" href="/en/"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect y="0" width="24" height="2.28" fill="#b22234"/><rect y="4.57" width="24" height="2.28" fill="#b22234"/><rect y="9.14" width="24" height="2.28" fill="#b22234"/><rect y="13.71" width="24" height="2.28" fill="#b22234"/><rect width="10.5" height="8.6" fill="#3c3b6e"/><g fill="#fff"><circle cx="2" cy="1.8" r=".6"/><circle cx="4.5" cy="1.8" r=".6"/><circle cx="7" cy="1.8" r=".6"/><circle cx="3.2" cy="4.3" r=".6"/><circle cx="5.7" cy="4.3" r=".6"/><circle cx="2" cy="6.8" r=".6"/><circle cx="4.5" cy="6.8" r=".6"/><circle cx="7" cy="6.8" r=".6"/></g></svg>EN</a>
+    <!-- 01 · CABECERA FIJA -->
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/" aria-label="Residencia Alentia, inicio">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#244736"/><path d="M20 9c5 3 8 7 8 12a8 8 0 0 1-16 0c0-5 3-9 8-12z" fill="#cfe3d0"/><path d="M20 14v14M20 20l-4-3M20 23l4-3" stroke="#244736" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span class="brand-name">Alentia</span>
+        </a>
+        <a class="header-tel" data-link="tel" href="tel:+34910555250" aria-label="Llamar a la residencia">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" width="20" height="20"><path d="M6.5 3h3l1.5 4-2 1.5a11 11 0 0 0 4.5 4.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span class="tel-num" data-var="telDisplay">910 555 250</span>
+        </a>
+        <a class="btn btn-primary header-cta" href="#visitanos">Reserva una visita</a>
+        <div class="lang-switch" role="group" aria-label="Idioma">
+          <a class="lang-link is-active" data-lang="es" hreflang="es-ES" href="/" aria-current="true"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#c60b1e"/><rect y="4" width="24" height="8" fill="#ffc400"/></svg>ES</a>
+          <span aria-hidden="true">·</span>
+          <a class="lang-link" data-lang="en" hreflang="en" href="/en/"><svg class="lang-flag" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" fill="#fff"/><rect y="0" width="24" height="2.28" fill="#b22234"/><rect y="4.57" width="24" height="2.28" fill="#b22234"/><rect y="9.14" width="24" height="2.28" fill="#b22234"/><rect y="13.71" width="24" height="2.28" fill="#b22234"/><rect width="10.5" height="8.6" fill="#3c3b6e"/></svg>EN</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- 02 · FRANJA DE URGENCIA -->
+    <div class="urgency">
+      <div class="wrap">
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v10M12 17h.01" stroke="#7a3f16" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="#7a3f16" stroke-width="1.6"/></svg>
+        ¿Alta hospitalaria o necesitas plaza urgente? Te atendemos hoy:</span>
+        <a data-link="tel" href="tel:+34910555250"><span data-var="telDisplay">910 555 250</span></a>
       </div>
     </div>
 
     <main id="main">
-      <!-- 01 · HERO -->
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media">
-          <!-- Ilustración de marca. Sustitúyela por un vídeo real de 12s en bucle (autoplay muted playsinline) o una foto del hogar. -->
-          <img class="hero-poster" src="https://images.pexels.com/photos/5774929/pexels-photo-5774929.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1280&amp;h=960" onerror="this.onerror=null;this.src='/img/hero.svg'" alt="Residentes y equipo de Golden Days compartiendo una comida" width="800" height="600" />
-        </div>
-        <div class="hero-copy">
-          <h1 id="hero-title">Aquí, tu madre sigue siendo ella misma.</h1>
-          <p class="hero-sub">
-            En <span data-gd="home.town">Fairfield</span> ·
-            Hogar de <span data-gd="home.residents">36</span> personas ·
-            <span data-gd="home.dayRatio">1 cuidador por cada 3, de día</span>
-          </p>
-          <a class="btn btn-primary" data-cta href="#visit">Ven a comer con nosotros</a>
-          <a class="scroll-link" href="#day">Mira cómo es un día aquí <span aria-hidden="true">↓</span></a>
-        </div>
-      </section>
-
-      <!-- 02 · BARRA DE CONFIANZA -->
-      <section class="trust" aria-label="Los números">
-        <ul class="metrics" id="metrics"><!-- se rellena desde content.js --></ul>
-        <p class="metrics-note">Cifras de ejemplo para esta demo: cada una es un número real y comprobable del hogar.</p>
-      </section>
-
-      <!-- 03 · CARTA DE LA DIRECCIÓN -->
-      <section class="letter reveal" aria-labelledby="letter-title">
-        <div class="letter-photo">
-          <!-- Ilustración de marca. Sustitúyela por una foto real de la dirección. -->
-          <img class="letter-portrait" src="https://images.pexels.com/photos/6670986/pexels-photo-6670986.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=800&amp;h=800" onerror="this.onerror=null;this.src='/img/director.svg'" alt="Retrato de Miguel Ángel, director de Golden Days" width="400" height="400" />
-        </div>
-        <div class="letter-body">
-          <h2 id="letter-title">Una nota antes de que decidas nada</h2>
-          <p>
-            Cuando encontraste esta página, seguramente era tarde y seguramente sentías que estabas
-            fallando. Me he sentado frente a cientos de hijos e hijas que cargan con el mismo miedo
-            callado: que llevar a un padre o una madre a un hogar significa rendirse con ellos.
-          </p>
-          <p>
-            No es así. No estás dejando atrás a tu madre. Estás poniendo su día en manos de personas
-            que pueden darle más de lo que una sola persona agotada puede dar sola: un médico al
-            final del pasillo, una cocina caliente, alguien con quien hablar a las tres de la tarde.
-          </p>
-          <p>
-            La culpa es real, y significa que la quieres. Pero querer no es lo mismo que hacerlo todo
-            tú solo. Así que ven a vernos, no a una visita guiada, a comer. Observa cómo hablamos con
-            las personas que viven aquí y decide con tus propios ojos. Si no es lo adecuado, lo
-            sabrás, y también está bien.
-          </p>
-          <p class="signature" aria-label="Firmado, la dirección">Miguel Ángel</p>
-          <p class="signature-role">Director, Golden Days <span class="todo-chip">TODO: nombre real y firma escaneada</span></p>
-        </div>
-      </section>
-
-      <!-- 04 · UN DÍA AQUÍ -->
-      <section id="day" class="day" aria-labelledby="day-title">
-        <h2 id="day-title" class="section-title">Un día aquí</h2>
-        <ol class="timeline" id="timeline"><!-- se rellena desde content.js --></ol>
-
-        <!-- Elemento estrella: la pizarra de hoy -->
-        <div class="board reveal" id="today-board" aria-live="polite">
-          <!-- se rellena desde content.js -->
-        </div>
-      </section>
-
-      <!-- 05 · LAS PERSONAS -->
-      <section class="people" aria-labelledby="people-title">
-        <h2 id="people-title" class="section-title">Las personas que sabrán el nombre de tu madre</h2>
-        <p class="section-sub">Cuánto tiempo lleva aquí cada una: el número que más importa.</p>
-        <ul class="people-grid" id="people"><!-- se rellena desde content.js --></ul>
-      </section>
-
-      <!-- 06 · VOCES DE LAS FAMILIAS -->
-      <section class="voices" aria-labelledby="voices-title">
-        <h2 id="voices-title" class="section-title">Lo que dicen otras familias</h2>
-        <p class="section-sub">Incluidas las partes que no fueron perfectas.</p>
-        <ul class="voices-grid" id="voices"><!-- se rellena desde content.js --></ul>
-      </section>
-
-      <!-- 07 · CIERRE Y VISITA -->
-      <section id="visit" class="visit" aria-labelledby="visit-title">
-        <div class="visit-inner">
-          <h2 id="visit-title">Ven a comer con nosotros</h2>
-          <p class="visit-frame">
-            Ven a comer un martes cualquiera. Sin visita comercial, sin presión, sin recorrido
-            preparado: solo una mesa, un plato de lo que come todo el mundo y tiempo para mirar
-            alrededor.
-          </p>
-
-          <form id="visit-form" novalidate>
-            <fieldset class="times">
-              <legend>Elige la hora que mejor te venga</legend>
-              <div class="time-options" id="visit-times"><!-- se rellena desde content.js --></div>
-            </fieldset>
-
-            <div class="fields">
-              <label>
-                <span>Tu nombre</span>
-                <input type="text" name="name" id="name" autocomplete="name" required />
-              </label>
-              <label>
-                <span>Tu teléfono</span>
-                <input type="tel" name="phone" id="phone" autocomplete="tel" required />
-              </label>
+      <!-- 03 · HERO -->
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-copy">
+            <h1>Cuidamos de tu padre o de tu madre como lo harías tú.</h1>
+            <p class="hero-sub">
+              Residencia en el noroeste de Madrid con equipo médico propio, precios claros
+              y visitas sin cita previa. Ven a conocernos hoy.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-call" data-link="tel" href="tel:+34910555250">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a11 11 0 0 0 4.5 4.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                Llamar
+              </a>
+              <a class="btn btn-wa" data-link="wa" href="https://wa.me/34611084250" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6a9 9 0 0 1-3.6-3.2c-.3-.4-.8-1.2-.8-2.3s.6-1.6.8-1.8c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.4.5c-.1.1-.2.3-.1.5.2.4.6 1 1.1 1.5.7.6 1.2.8 1.5.9.2.1.4.1.5-.1l.5-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3.1.2.1.6-.1 1.1z"/></svg>
+                WhatsApp
+              </a>
+              <a class="btn btn-primary" href="#visitanos">Reserva una visita</a>
             </div>
+            <span class="badge-avail" data-avail>
+              <span class="dot" aria-hidden="true"></span>
+              <span><span data-avail-text>Plazas disponibles</span><small data-avail-updated>Última actualización: julio de 2026</small></span>
+            </span>
+          </div>
+          <div class="hero-media-col">
+            <div class="hero-photo">
+              <img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/5774929/pexels-photo-5774929.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1400&h=1050" alt="Una cuidadora y una residente conversan y ríen juntas en la sala común de la residencia" loading="eager" width="1400" height="1050" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <button type="submit" class="btn btn-primary btn-block">
-              <span class="btn-label">Ven a comer con nosotros</span>
-            </button>
-            <p class="reassure">Te llama Carmen, no un comercial.</p>
-            <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
-          </form>
+      <!-- 04 · FRANJA DE CONFIANZA -->
+      <section class="trust" aria-label="Datos de la residencia">
+        <div class="wrap">
+          <ul>
+            <li><b><span data-var="years">18</span> años</b><span>cuidando de familias en Madrid</span></li>
+            <li><b data-var="ratio">1 : 6</b><span>un cuidador por cada 6 residentes, de media</span></li>
+            <li><b>Propios</b><span>médico y enfermería en plantilla, no externos</span></li>
+            <li><b data-var="registro">Registro C.A.M. nº S-4821</b><span>centro autorizado por la Comunidad de Madrid</span></li>
+          </ul>
+        </div>
+      </section>
 
-          <div class="visit-done" id="visit-done" hidden>
-            <div class="done-mark" aria-hidden="true">🌿</div>
-            <h3>Gracias. Carmen te llamará.</h3>
-            <p id="visit-done-detail"></p>
+      <!-- 05 · ESTANCIAS Y PRECIOS -->
+      <section class="pricing" id="precios">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Precios claros</p>
+            <h2 class="section-title">Estancias y precios orientativos</h2>
+            <p class="section-sub">Lo publicamos porque casi nadie lo hace. Así sabes desde el primer minuto si encajamos con tu situación.</p>
+          </div>
+          <div class="price-grid">
+            <div class="price-card">
+              <h3>Estancia permanente</h3>
+              <p class="from">desde</p>
+              <p class="price"><span data-var="prices.permanent">1.950</span> €<small> /mes</small></p>
+              <p>El hogar de tu padre o tu madre, con atención completa las 24 horas.</p>
+            </div>
+            <div class="price-card">
+              <h3>Estancia temporal · respiro familiar</h3>
+              <p class="from">desde</p>
+              <p class="price"><span data-var="prices.temporary">79</span> €<small> /día</small></p>
+              <p>Para unos días o unas semanas, cuando la familia necesita descansar o ausentarse.</p>
+            </div>
+            <div class="price-card">
+              <h3>Convalecencia tras hospital</h3>
+              <p class="from">desde</p>
+              <p class="price"><span data-var="prices.convalescence">89</span> €<small> /día</small></p>
+              <p>Recuperación tras un alta, con fisioterapia y seguimiento médico diario.</p>
+            </div>
+            <div class="price-card">
+              <h3>Centro de día</h3>
+              <p class="from">desde</p>
+              <p class="price"><span data-var="prices.dayCentre">690</span> €<small> /mes</small></p>
+              <p>Viene por la mañana, come, hace actividad y vuelve a casa a dormir.</p>
+            </div>
+          </div>
+          <p class="price-note">El precio incluye habitación, manutención, atención médica y actividades. <b>Sin sorpresas: precio cerrado por escrito en la primera visita.</b></p>
+        </div>
+      </section>
+
+      <!-- 06 · UN DÍA AQUÍ -->
+      <section class="day" id="dia">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Un día aquí</p>
+            <h2 class="section-title">¿Qué hará tu madre todo el día?</h2>
+            <p class="section-sub">La pregunta que casi nadie sabe hacer en voz alta. Esto es un día normal.</p>
+          </div>
+          <ol class="day-list">
+            <li><span class="day-time">8:00</span><span><span class="day-title">Desayuno y aseo con ayuda</span><br><span class="day-note">Sin prisas, respetando el ritmo de cada persona.</span></span></li>
+            <li><span class="day-time">10:30</span><span><span class="day-title">Fisioterapia o taller de memoria</span><br><span class="day-note">En grupos pequeños, adaptado a cada uno.</span></span></li>
+            <li><span class="day-time">13:30</span><span><span class="day-title">Comida casera</span><br><span class="day-note">Cocina propia, menús revisados por el médico.</span></span></li>
+            <li><span class="day-time">17:00</span><span><span class="day-title">Merienda y visitas de la familia</span><br><span class="day-note">La hora más concurrida y alegre del día.</span></span></li>
+            <li><span class="day-time">19:30</span><span><span class="day-title">Cena y rato tranquilo</span><br><span class="day-note">Una película, música o charla antes de dormir.</span></span></li>
+            <li><span class="day-time">21:00</span><span><span class="day-title">Rondas de noche</span><br><span class="day-note">Enfermería presente toda la noche, cada noche.</span></span></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 07 · SABRÁS CÓMO ESTÁ -->
+      <section class="know">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Tranquilidad continua</p>
+            <h2 class="section-title">Sabrás cómo está, aunque no puedas venir cada día</h2>
+          </div>
+          <div class="know-grid">
+            <div class="know-item">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="m3 8 9 5 9-5" stroke="currentColor" stroke-width="1.8"/></svg></span>
+              <div><h3>Fotos y novedades cada semana</h3><p>Te contamos cómo va la semana de tu padre o tu madre, con fotos reales.</p></div>
+            </div>
+            <div class="know-item">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3h8l2 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7l2-4z" stroke="currentColor" stroke-width="1.7"/><path d="M9 11h6M9 15h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+              <div><h3>Informe mensual del médico</h3><p>Un resumen claro de su salud, sin jerga, cada mes.</p></div>
+            </div>
+            <div class="know-item">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+              <div><h3>Visitas sin cita, todos los días</h3><p>Puedes venir a verle de <span data-var="visitHours">10:00 a 20:00</span>. Quien no esconde nada, no restringe las visitas.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 · EL EQUIPO -->
+      <section class="team" id="equipo">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Las personas</p>
+            <h2 class="section-title">Quién va a cuidar de tu familia</h2>
+            <p class="section-sub">Damos la cara. Estas son las personas que estarán con tu padre o tu madre cada día.</p>
+          </div>
+          <div class="team-grid">
+            <article class="member">
+              <div class="photo"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/16152597/pexels-photo-16152597.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=640&h=640" alt="Retrato de Marta Ledesma, directora" loading="lazy" width="640" height="640" /></div>
+              <div class="body"><p class="name">Marta Ledesma</p><p class="role">Directora</p><p class="say">“Mi puerta está siempre abierta. Si algo no va bien, quiero ser la primera en saberlo.”</p></div>
+            </article>
+            <article class="member">
+              <div class="photo"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/3714743/pexels-photo-3714743.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=640&h=640" alt="Retrato de la Dra. Elena Ruiz, médico" loading="lazy" width="640" height="640" /></div>
+              <div class="body"><p class="name">Dra. Elena Ruiz</p><p class="role">Médico del centro</p><p class="say">“Conozco a cada residente por su nombre y su historia, no por un número de habitación.”</p></div>
+            </article>
+            <article class="member">
+              <div class="photo"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/33674900/pexels-photo-33674900.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=640&h=640" alt="Retrato de Rosa Nieto, coordinadora de enfermería" loading="lazy" width="640" height="640" /></div>
+              <div class="body"><p class="name">Rosa Nieto</p><p class="role">Coordinadora de enfermería</p><p class="say">“De noche también hay alguien despierto y atento. Eso lo cambia todo.”</p></div>
+            </article>
+            <article class="member">
+              <div class="photo"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=640&h=640" alt="Retrato de Javier Alonso, fisioterapeuta" loading="lazy" width="640" height="640" /></div>
+              <div class="body"><p class="name">Javier Alonso</p><p class="role">Fisioterapeuta</p><p class="say">“Un paseo más largo, levantarse solo… las pequeñas victorias son las que importan.”</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 · INSTALACIONES -->
+      <section class="facilities" id="instalaciones">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Instalaciones</p>
+            <h2 class="section-title">Un sitio para vivir, no para esperar</h2>
+            <p class="section-sub">Habitaciones individuales y dobles, todas con baño adaptado.</p>
+          </div>
+          <div class="gallery">
+            <figure><div class="ph-photo"><span>Habitación individual</span></div><figcaption>Habitación individual</figcaption></figure>
+            <figure><div class="ph-photo"><span>Comedor</span></div><figcaption>Comedor</figcaption></figure>
+            <figure><div class="ph-photo"><span>Jardín</span></div><figcaption>Jardín</figcaption></figure>
+            <figure><div class="ph-photo"><span>Sala de fisioterapia</span></div><figcaption>Sala de fisioterapia</figcaption></figure>
+            <figure><div class="ph-photo"><span>Sala común</span></div><figcaption>Sala común</figcaption></figure>
+            <figure><div class="ph-photo"><span>Baño adaptado</span></div><figcaption>Baño adaptado</figcaption></figure>
+          </div>
+          <div class="video-tour" role="img" aria-label="Vídeo-tour de la residencia (próximamente)">
+            <span class="play" aria-hidden="true"></span>
+            <span>Vídeo-tour · próximamente</span>
+          </div>
+          <p class="rooms-note">Todas las habitaciones tienen baño propio adaptado, cama articulada y aviso de enfermería. Puedes traer sus muebles y sus cosas: esto es su casa.</p>
+        </div>
+      </section>
+
+      <!-- 10 · CÓMO CONSEGUIR PLAZA -->
+      <section class="steps" id="plaza">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Sin fricción</p>
+            <h2 class="section-title">Cómo conseguir plaza, en 3 pasos</h2>
+          </div>
+          <div class="steps-grid">
+            <div class="step"><div class="n">1</div><h3>Llámanos o reserva una visita</h3><p>Te atendemos hoy mismo y resolvemos tus dudas por teléfono o en persona.</p></div>
+            <div class="step"><div class="n">2</div><h3>Valoración gratuita con nuestro médico</h3><p>En el centro o a domicilio, para saber qué necesita tu padre o tu madre.</p></div>
+            <div class="step"><div class="n">3</div><h3>Ingreso acompañado</h3><p>Con un periodo de adaptación de 30 días. Sin permanencia.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 · TESTIMONIOS -->
+      <section class="testimonials" id="familias">
+        <div class="wrap">
+          <div class="section-head" style="max-width:none">
+            <p class="eyebrow">Familias</p>
+            <h2 class="section-title">Lo que cuentan otras familias</h2>
+          </div>
+          <p class="testi-flag"><b>Ejemplos de demostración</b> — testimonios ilustrativos para esta web de muestra.</p>
+          <div class="testi-grid">
+            <article class="testi">
+              <p class="quote">“Llegamos de un alta hospitalaria, de un día para otro. Nos atendieron esa misma tarde y mi madre entró a la semana.”</p>
+              <div class="who"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/34381970/pexels-photo-34381970.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=160&h=160" alt="" loading="lazy" width="80" height="80" /><span><b>Beatriz</b><span>hija de una residente · ejemplo</span></span></div>
+            </article>
+            <article class="testi">
+              <p class="quote">“Al principio me sentía culpable. Se me pasó el primer día que vi a mi padre riéndose en el taller.”</p>
+              <div class="who"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/31654010/pexels-photo-31654010.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=160&h=160" alt="" loading="lazy" width="80" height="80" /><span><b>Andrés</b><span>hijo de un residente · ejemplo</span></span></div>
+            </article>
+            <article class="testi">
+              <p class="quote">“Poder venir cualquier día sin avisar me dio la tranquilidad que ninguna otra residencia me dio.”</p>
+              <div class="who"><img onerror="this.style.visibility='hidden'" src="https://images.pexels.com/photos/3484670/pexels-photo-3484670.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=160&h=160" alt="" loading="lazy" width="80" height="80" /><span><b>Carmen</b><span>hija de una residente · ejemplo</span></span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 · PREGUNTAS FRECUENTES -->
+      <section class="faq" id="faq">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Preguntas frecuentes</p>
+            <h2 class="section-title">Las respuestas que buscas de noche</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item"><summary>¿Cuánto cuesta exactamente y qué no está incluido?</summary><div class="answer"><p>La estancia permanente arranca en <span data-var="prices.permanent">1.950</span> €/mes e incluye habitación, comidas, atención médica y de enfermería, y actividades. Aparte quedan solo gastos personales (peluquería, podología, farmacia no cubierta). En la primera visita te damos el precio cerrado por escrito, sin letra pequeña.</p></div></details>
+            <details class="faq-item"><summary>¿Hay plaza ahora mismo?</summary><div class="answer"><p>Sí, a fecha de <span data-var="availabilityUpdated">julio de 2026</span> tenemos plazas disponibles. La disponibilidad cambia; llámanos al <a data-link="tel" href="tel:+34910555250"><span data-var="telDisplay">910 555 250</span></a> y te confirmamos al momento.</p></div></details>
+            <details class="faq-item"><summary>¿Qué pasa si su salud empeora?</summary><div class="answer"><p>Estamos preparados para más dependencia sin que tengáis que mudaros a otro sitio. Nuestro médico y enfermería ajustan los cuidados; solo derivamos al hospital cuando de verdad hace falta, y os acompañamos en todo el proceso.</p></div></details>
+            <details class="faq-item"><summary>¿Cómo funcionan las visitas?</summary><div class="answer"><p>Sin cita y todos los días, de <span data-var="visitHours">10:00 a 20:00</span>. Puedes comer con tu familiar, salir a pasear o quedarte el rato que quieras.</p></div></details>
+            <details class="faq-item"><summary>¿Cómo es el periodo de adaptación (y qué pasa si no se adapta)?</summary><div class="answer"><p>Los primeros 30 días son de adaptación, acompañados de cerca. Si en ese tiempo veis que no es el sitio, os devolvemos la parte no consumida. No hay permanencia ni penalización.</p></div></details>
+            <details class="faq-item"><summary>¿Qué hay que llevar el primer día?</summary><div class="answer"><p>Ropa cómoda marcada con su nombre, aseo personal, la medicación con su informe médico, y el DNI y la tarjeta sanitaria. Lo demás lo tenemos aquí. Puede traer también fotos y algún mueble para sentirse en casa.</p></div></details>
+            <details class="faq-item"><summary>¿Puedo pedir ayudas o plaza de la Ley de Dependencia?</summary><div class="answer"><p>Sí. Te ayudamos con los trámites de la Ley de Dependencia y del cheque-servicio de la Comunidad de Madrid, y te explicamos si te conviene la plaza privada mientras se resuelve. Sin coste por ese asesoramiento.</p></div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 · VISÍTANOS -->
+      <section class="visit" id="visitanos">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Visítanos</p>
+            <h2 class="section-title">Ven a conocernos, sin cita</h2>
+            <p class="section-sub">Nadie ingresa a su madre en un sitio que no ha pisado. Ven a verlo con tus propios ojos.</p>
+          </div>
+          <div class="visit-grid">
+            <div class="visit-info">
+              <h3>Dónde estamos</h3>
+              <p class="addr"><span data-var="address.street">Calle del Olivar, 28</span><br><span data-var="address.full">28035 Madrid · Mirasierra</span></p>
+              <p>En transporte público: Metro Mirasierra (L9) y líneas de autobús 132 y 178 a pocos minutos andando.</p>
+              <p><a class="visit-open" data-link="maps" href="https://www.google.com/maps/search/?api=1&query=Mirasierra+Madrid" target="_blank" rel="noopener">Cómo llegar en Google Maps ↗</a></p>
+              <p style="margin-top:14px"><span class="visit-open"><svg viewBox="0 0 24 24" fill="none" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#1f4a33" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="#1f4a33" stroke-width="1.8" stroke-linecap="round"/></svg> Visitas sin cita, todos los días de <span data-var="visitHours">10:00 a 20:00</span></span></p>
+              <div class="hero-actions" style="margin-top:20px">
+                <a class="btn btn-call" data-link="tel" href="tel:+34910555250">Llamar ahora</a>
+                <a class="btn btn-wa" data-link="wa" href="https://wa.me/34611084250" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+            <div class="visit-map" aria-hidden="true">
+              <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+                <rect width="400" height="320" fill="#e9ecdf"/>
+                <path d="M0 120 H400 M0 210 H400 M120 0 V320 M270 0 V320" stroke="#d3d8c4" stroke-width="10"/>
+                <path d="M60 60 Q 200 100 340 70" stroke="#c9d0bb" stroke-width="14" fill="none"/>
+                <rect x="40" y="150" width="120" height="90" rx="6" fill="#cfe0cf"/>
+                <circle cx="270" cy="120" r="16" fill="#a35c34"/>
+                <path d="M270 108a10 10 0 0 0-10 10c0 7 10 16 10 16s10-9 10-16a10 10 0 0 0-10-10z" fill="#244736"/>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p class="footer-name">🌿 Golden Days</p>
-      <p>Un hogar en <span data-gd="home.town">Fairfield</span>. Ven a verlo con tus propios ojos.</p>
+    <!-- 14 · PIE -->
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Residencia Alentia</span>
+          <p style="margin-top:10px"><span data-var="address.street">Calle del Olivar, 28</span><br><span data-var="address.full">28035 Madrid · Mirasierra</span></p>
+          <p><a data-link="tel" href="tel:+34910555250"><span data-var="telDisplay">910 555 250</span></a> · <a data-link="email" href="mailto:info@residenciaalentia.es"><span data-var="email">info@residenciaalentia.es</span></a></p>
+          <p>Visitas: todos los días, de <span data-var="visitHours">10:00 a 20:00</span></p>
+        </div>
+        <div>
+          <h4>La residencia</h4>
+          <ul>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#dia">Un día aquí</a></li>
+            <li><a href="#equipo">El equipo</a></li>
+            <li><a href="#instalaciones">Instalaciones</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Información legal</h4>
+          <ul>
+            <li><a href="/aviso-legal.html">Aviso legal</a></li>
+            <li><a href="/privacidad.html">Política de privacidad</a></li>
+            <li data-var="registro">Registro C.A.M. nº S-4821</li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap footer-legal">
+        <p>© <span data-year>2026</span> Residencia Alentia. Todos los derechos reservados.</p>
+        <p class="demo">Web de demostración diseñada por Conjure — <a href="https://trustthewizard.com" target="_blank" rel="noopener">trustthewizard.com</a>. Residencia ficticia; datos, precios y testimonios son ejemplos.</p>
+      </div>
     </footer>
 
-    <!-- Botón de llamada siempre visible en el móvil -->
-    <a class="call-bar" data-gd-href="home.phoneHref" href="tel:+15552104488">
-      <span aria-hidden="true">☏</span> Llámanos · <span data-gd="home.phone">(555) 210-4488</span>
-    </a>
+    <!-- Barra fija móvil -->
+    <nav class="mobile-bar" aria-label="Contacto rápido">
+      <a class="btn btn-call" data-link="tel" href="tel:+34910555250">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a11 11 0 0 0 4.5 4.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        Llamar
+      </a>
+      <a class="btn btn-wa" data-link="wa" href="https://wa.me/34611084250" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6a9 9 0 0 1-3.6-3.2c-.3-.4-.8-1.2-.8-2.3s.6-1.6.8-1.8c.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.4.5c-.1.1-.2.3-.1.5.2.4.6 1 1.1 1.5.7.6 1.2.8 1.5.9.2.1.4.1.5-.1l.5-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.3.1.2.1.6-.1 1.1z"/></svg>
+        WhatsApp
+      </a>
+    </nav>
 
-    <script src="/content.js?v=7"></script>
-    <script src="/main.js?v=7"></script>
+    <script src="/content.js?v=8"></script>
+    <script src="/main.js?v=8"></script>
   </body>
 </html>
