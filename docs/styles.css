@@ -177,16 +177,31 @@ section {
   min-height: 220px;
 }
 
-/* Illustrated imagery (brand portraits + hero scene; swap for real photos) */
-img.hero-poster { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Imagery (brand portraits + hero scene now; real photos on swap).
+   Fixed aspect boxes + object-fit:cover so any photo ratio crops cleanly and
+   the cards stay aligned. */
+img.hero-poster {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 .letter-portrait {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   display: block;
 }
 .person-photo {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius);
   margin-bottom: 14px;
   display: block;
@@ -194,6 +209,9 @@ img.hero-poster { width: 100%; height: 100%; object-fit: cover; display: block; 
 }
 .voice-photo {
   width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius);
   margin-bottom: 16px;
   display: block;
@@ -538,7 +556,10 @@ img.hero-poster { width: 100%; height: 100%; object-fit: cover; display: block; 
 
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
+  /* Must out-specify `.js .reveal { opacity: 0 }` so content is shown, not
+     hidden-until-scroll, for people who prefer reduced motion. */
+  .js .reveal,
+  .js .reveal.in { opacity: 1; transform: none; transition: none; }
   .btn-primary:hover { transform: none; }
   .js .hero-media,
   .js .hero-copy > * { animation: none; opacity: 1; }
