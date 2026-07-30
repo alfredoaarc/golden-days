@@ -4,8 +4,28 @@ document.documentElement.classList.add("js");
 // Pick the language block that matches this page's <html lang> ("es" or "en").
 const LANG = (document.documentElement.lang || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en";
 const ALL = window.GD || {};
-const GD = ALL[LANG] || ALL.en || {};
-const S = GD.strings || {};
+// Prefer the page's language block; fall back to English, then to a legacy flat
+// GD object (older content.js) so a stale cache degrades gracefully, never blank.
+const GD = ALL[LANG] || ALL.en || (ALL.metrics ? ALL : {});
+// Defensive defaults: if a content.js has no `strings`, the dynamic bits still
+// render instead of throwing and wiping every section.
+const S = Object.assign(
+  {
+    yearsHere: (n) => String(n),
+    boardEyebrow: "",
+    boardToday: (d) => String(d),
+    boardWeek: "",
+    lunch: "",
+    todayLabel: "",
+    weekLabel: "",
+    starsAria: (n) => String(n),
+    errName: "Please add your name.",
+    errPhone: "Please add a phone number.",
+    doneWithTime: (t, name) => String(name),
+    doneNoTime: (name) => String(name),
+  },
+  GD.strings || {}
+);
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const path = (obj, p) => p.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
