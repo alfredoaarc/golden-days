@@ -108,8 +108,9 @@ if (board) {
 const peopleEl = $("#people");
 if (peopleEl && GD.people) {
   GD.people.forEach((p) => {
+    const fb = p.fallback ? ` data-fallback="${esc(p.fallback)}" onerror="this.onerror=null;this.src=this.dataset.fallback"` : "";
     const photo = p.photo
-      ? `<img class="person-photo" src="${esc(p.photo)}" alt="${esc(p.name)}, ${esc(p.role)}" loading="lazy" width="200" height="200" />`
+      ? `<img class="person-photo" src="${esc(p.photo)}"${fb} alt="${esc(p.name)}, ${esc(p.role)}" loading="lazy" width="200" height="200" />`
       : `<div class="photo-ph" role="img" aria-label="${esc(p.name)}"><span class="todo-chip">TODO: photo</span></div>`;
     const years = S.yearsHere(p.years);
     peopleEl.append(
@@ -128,8 +129,9 @@ if (voicesEl && GD.voices) {
   GD.voices.forEach((v) => {
     const stars =
       "★".repeat(v.stars) + `<span class="off">${"★".repeat(5 - v.stars)}</span>`;
+    const vfb = v.fallback ? ` data-fallback="${esc(v.fallback)}" onerror="this.onerror=null;this.src=this.dataset.fallback"` : "";
     const video = v.photo
-      ? `<img class="voice-photo" src="${esc(v.photo)}" alt="${esc(v.name)}" loading="lazy" width="200" height="200" />`
+      ? `<img class="voice-photo" src="${esc(v.photo)}"${vfb} alt="${esc(v.name)}" loading="lazy" width="200" height="200" />`
       : `<div class="voice-video"><div class="photo-ph" role="img" aria-label="${esc(v.name)}"><span class="todo-chip">TODO: photo</span></div></div>`;
     const reply = v.reply ? `<div class="voice-reply">${esc(v.reply)}</div>` : "";
     voicesEl.append(

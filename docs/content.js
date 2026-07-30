@@ -52,25 +52,25 @@ window.GD = {
 
     // 05 · Las personas. Los años aquí es el número que más confianza da.
     people: [
-      { name: "Dra. Elena", role: "Médica del hogar", years: 12, photo: "/img/elena.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
-      { name: "Rosa", role: "Enfermera", years: 9, photo: "/img/rosa.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
-      { name: "Miguel", role: "Cuidador de planta", years: 7, photo: "/img/miguel.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
-      { name: "Carmen", role: "Enseña el hogar a las familias", years: 15, photo: "/img/carmen.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
+      { name: "Dra. Elena", role: "Médica del hogar", years: 12, photo: "https://images.pexels.com/photos/3714743/pexels-photo-3714743.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/elena.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
+      { name: "Rosa", role: "Enfermera", years: 9, photo: "https://images.pexels.com/photos/33674900/pexels-photo-33674900.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/rosa.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
+      { name: "Miguel", role: "Cuidador de planta", years: 7, photo: "https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/miguel.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
+      { name: "Carmen", role: "Enseña el hogar a las familias", years: 15, photo: "https://images.pexels.com/photos/16152597/pexels-photo-16152597.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/carmen.svg" }, // ilustración de marca — sustituir por foto real cuando la tengas
     ],
 
     // 06 · Voces de las familias. Miniaturas ilustradas de marca (sustitúyelas por
     // vídeos reales). Se deja a propósito una reseña honesta de 3 estrellas.
     voices: [
-      { name: "Ana", role: "hija de una residente", line: "Mi padre discutió con toda la idea. Ahora lo llama su casa.", stars: 5, photo: "/img/ana.svg" },
+      { name: "Ana", role: "hija de una residente", line: "Mi padre discutió con toda la idea. Ahora lo llama su casa.", stars: 5, photo: "https://images.pexels.com/photos/34381970/pexels-photo-34381970.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/ana.svg" },
       {
         name: "Marta",
         role: "hija de una residente",
         line: "Las dos primeras semanas fueron duras, y la ropa se mezcló más de una vez.",
         stars: 3,
         reply: "Tenías razón, Marta: cambiamos cómo etiquetamos todo después de tu visita. Gracias por empujarnos a mejorar. — El equipo",
-        photo: "/img/marta.svg",
+        photo: "https://images.pexels.com/photos/3484670/pexels-photo-3484670.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/marta.svg",
       },
-      { name: "Luis", role: "hijo de una residente", line: "Me mandan una foto cada vez que mamá tiene un buen día. Me siento cerca, aunque esté lejos.", stars: 5, photo: "/img/luis.svg" },
+      { name: "Luis", role: "hijo de una residente", line: "Me mandan una foto cada vez que mamá tiene un buen día. Me siento cerca, aunque esté lejos.", stars: 5, photo: "https://images.pexels.com/photos/31654010/pexels-photo-31654010.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/luis.svg" },
     ],
 
     // 07 · Horas para visitar. Preferencias suaves: Carmen confirma la hora exacta por teléfono.
@@ -136,23 +136,23 @@ window.GD = {
     },
 
     people: [
-      { name: "Dr. Elena", role: "House doctor", years: 12, photo: "/img/elena.svg" }, // brand illustration — swap for a real photo when you have one
-      { name: "Rosa", role: "Nurse", years: 9, photo: "/img/rosa.svg" }, // brand illustration — swap for a real photo when you have one
-      { name: "Miguel", role: "Floor carer", years: 7, photo: "/img/miguel.svg" }, // brand illustration — swap for a real photo when you have one
-      { name: "Carmen", role: "She shows families around", years: 15, photo: "/img/carmen.svg" }, // brand illustration — swap for a real photo when you have one
+      { name: "Dr. Elena", role: "House doctor", years: 12, photo: "https://images.pexels.com/photos/3714743/pexels-photo-3714743.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/elena.svg" }, // brand illustration — swap for a real photo when you have one
+      { name: "Rosa", role: "Nurse", years: 9, photo: "https://images.pexels.com/photos/33674900/pexels-photo-33674900.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/rosa.svg" }, // brand illustration — swap for a real photo when you have one
+      { name: "Miguel", role: "Floor carer", years: 7, photo: "https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/miguel.svg" }, // brand illustration — swap for a real photo when you have one
+      { name: "Carmen", role: "She shows families around", years: 15, photo: "https://images.pexels.com/photos/16152597/pexels-photo-16152597.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/carmen.svg" }, // brand illustration — swap for a real photo when you have one
     ],
 
     voices: [
-      { name: "Ana", role: "daughter of a resident", line: "My father argued about the whole idea. Now he calls it home.", stars: 5, photo: "/img/ana.svg" },
+      { name: "Ana", role: "daughter of a resident", line: "My father argued about the whole idea. Now he calls it home.", stars: 5, photo: "https://images.pexels.com/photos/34381970/pexels-photo-34381970.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/ana.svg" },
       {
         name: "Marta",
         role: "daughter of a resident",
         line: "The first two weeks were hard, and the laundry got mixed up more than once.",
         stars: 3,
         reply: "You were right, Marta — we changed how we label everything after your visit. Thank you for pushing us to be better. — The team",
-        photo: "/img/marta.svg",
+        photo: "https://images.pexels.com/photos/3484670/pexels-photo-3484670.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/marta.svg",
       },
-      { name: "Luis", role: "son of a resident", line: "They send me a photo whenever Mum has a good day. I feel close, even from far away.", stars: 5, photo: "/img/luis.svg" },
+      { name: "Luis", role: "son of a resident", line: "They send me a photo whenever Mum has a good day. I feel close, even from far away.", stars: 5, photo: "https://images.pexels.com/photos/31654010/pexels-photo-31654010.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=800&h=800", fallback: "/img/luis.svg" },
     ],
 
     visitTimes: [
